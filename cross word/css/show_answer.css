@@ -1,0 +1,27 @@
+table{
+    border-collapse: collapse;
+    box-shadow: rgba(10, 0, 0, 0.4) 0 8px 3px,rgba(0, 0, 0, 0.3) 0 7px 13px 8px,#000000 0 3px 0 inset;
+
+}
+td{
+    border: 1px solid black;
+    width: 60px;
+    height: 30px;
+    background-color: #ffd54f;
+}
+.black{
+    background-color:black;
+}
+input{
+    font-size: 25px;
+    border: 0px solid;
+    width: 60px;
+    height: 30px;
+    color: #000000;
+    background-color: #ffd54f;
+    
+}
+.inp{
+    position: relative;
+    top: 20%;
+    }

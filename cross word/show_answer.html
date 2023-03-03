@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="css/show_answer.css">
+  
+</head>
+<body>
+    
+    <div  class="board" >
+        <!-- <div onclick="starttime(true)"> -->
+     <table>
+         <!-- <h2 class="headingCenter">Cross Word Puzzle</h2> -->
+ 
+         <tr>
+        <td> <sup>1</sup><input value="d"> </td>
+          <td><sup>2</sup> <input value="r">  </td>
+          <td> <sup>3</sup> <input value="i">  </td>
+          <td> <input value="v" class="inp">  </td>
+          <td> <input value="e" class="inp"> </td>
+          <td> <input value="r" class="inp"> </td>
+          <td> <sup>4</sup><input value="s">  </td>
+          </tr>
+        
+          <tr>
+            <td><sup>5</sup> <input value="e">  </td>
+            <td> <input value="a" class="inp"> </td>
+            <td> <input value="r" class="inp">  </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td> <input value="t" class="inp">  </td>
+          </tr>
+          
+          <tr>
+            <td><sup>6</sup><input value="s">  </td>
+            <td> <input value="t" class="inp"> </td>
+            <td><input value="e" class="inp"> </td>
+              <td><input value="w" class="inp"> </td>
+              <td><sup>7</sup><input value="s">  </td>
+             <td class="black"></td>
+              <td><input value="r" class="inp"> </td>
+          </tr>
+        
+          <tr>
+            <td><input value="e" class="inp"> </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td><sup>8</sup><input value="t"> </td>
+            <td><input value="o" class="inp">  </td>
+            <td><input value="e" class="inp">  </td>
+          </tr>
+         
+          <tr>
+            <td><input value="r" class="inp"> </td>
+            <td class="black"></td>
+            <td><sup>9</sup><input value="o"> </td>
+            <td class="black"></td>
+            <td><input value="r" class="inp"> </td>
+            <td class="black"></td>
+            <td><input value="w" class="inp"> </td>
+          </tr>
+          
+          <tr>
+            <td><sup>10</sup><input value="t"> </td>
+            <td> <input value="i" class="inp"> </td>
+            <td><input value="t" class="inp">  </td>
+            <td> <input value="l" class="inp">  </td>
+            <td><input value="e" class="inp">  </td>
+            <td class="black"></td>
+            <td><input value="n" class="inp"> </td>
+          </tr>
+        
+          <tr>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td><input value="h" class="inp">  </td>
+            <td class="black"></td>
+            <td><sup>11</sup><input value="a">  </td>
+            <td> <sup>12</sup>  <input value="n"> </td>
+            <td class="black"></td>
+          </tr>
+          <tr> 
+            <td class="black"></td>
+            <td> <sup>13</sup><input value="m">  </td>
+            <td><input value="e" class="inp">  </td>
+            <td class="black"></td>
+            <td> <sup>14</sup><input value="m">  </td>
+            <td><input value="e" class="inp">  </td>
+            <td><input value="w" class="inp">  </td>
+          </tr>
+          <tr>
+            <td><sup>15</sup> <input value="c"> </td>
+            <td> <input value="a" class="inp"> </td>
+            <td><input value="r" class="inp">  </td>
+            <td><input value="s" class="inp"> </td>
+            <td class="black"></td>
+            <td><input value="a" class="inp">  </td>
+            <td class="black"></td>
+          </tr>
+          <tr>
+            <td> <sup>16</sup><input value="o"> </td>
+            <td> <input value="r" class="inp">  </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td><sup>17</sup> <input value="a">  </td>
+            <td><input value="t" class="inp"> </td>
+            <td> <input value="e" class="inp">  </td>
+          </tr>
+         
+     </table>
+   <!-- </div> -->
+    <!-- <button onclick="checkAnswer()" class="btn">Submit</button> -->
+   </div>
+
+   <script>
+   window.onload = function() {
+      const inputs = document.querySelectorAll('input');
+      inputs.forEach(input => {
+        input.disabled = true;
+      });
+    }
+  </script>
+</body>
+</html>

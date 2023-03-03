@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Word</title>
+    <link rel="stylesheet" href="css/crossWord.css">
+    <script src="script/crossWord.js"></script>
+    <link rel="stylesheet" href="css/stopWatch.css">
+    <script src="script/stopWatch.js"></script>
+    <script src="script/valid_answer.js"></script>
+</head>
+<body>
+
+
+    <div class="main" id="main" >
+       
+      <div id="time">
+        <span class="digit" id="hr">
+          00</span>
+        <span class="txt">Hr</span>
+        <span class="digit" id="min">
+          00</span>
+        <span class="txt">Min</span>
+        <span class="digit" id="sec">
+          00</span>
+        <span class="txt">Sec</span>
+     
+        </div>
+        <div>
+        <button class="button-30" role="button" id="btn" onclick="visibleAnswer()"><span class="text">Show Answer</span></button>
+        <button class="button-30" role="button" id="btn2" onclick="locationreload()"><span class="text">Start Again</span></button>
+        </div>
+        <div  class="board" >
+       <!-- <div onclick="starttime(true)"> -->
+    <table onclick="starttime(true), validAnswer()" id="tab1">
+        <h2 class="headingCenter">Cross Word Puzzle</h2>
+
+        <tr>
+            <td><sup>1</sup> <input type="text" maxlength="1" id="1" class="across1 down1">  </td>
+            <td><sup>2</sup> <input type="text" maxlength="1" id="2" class="across1 down2"> </td>
+            <td><sup>3</sup> <input type="text" maxlength="1" id="3" class="across1 down3"> </td>
+            <td> <input type="text" maxlength="1" id="4" class="inp across1"> </td>
+            <td> <input type="text" maxlength="1" id="5" class="inp across1"> </td>
+            <td> <input type="text" maxlength="1" id="6" class="inp across1"> </td>
+            <td><sup>4</sup> <input type="text" maxlength="1" id="7" class="across1 down4"> </td>
+        </tr>
+
+        <tr>
+            <td><sup>5</sup> <input type="text" maxlength="1" id="8" class="across2 down1"> </td>
+            <td> <input type="text" maxlength="1" id="9" class="inp across2 down2"> </td>
+            <td> <input type="text" maxlength="1" id="10" class="inp across2 down3"> </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="11" class="inp down4"> </td>
+        </tr>
+
+        <tr>
+            <td><sup>6</sup> <input type="text" maxlength="1" id="12" class="across3 down1"> </td>
+            <td> <input type="text" maxlength="1" id="13" class="inp across3 down2"> </td>
+            <td> <input type="text" maxlength="1" id="14" class="inp across3 down3"> </td>
+            <td> <input type="text" maxlength="1" id="15" class="inp across3"> </td>
+            <td><sup>7</sup> <input type="text" maxlength="1" id="16" class="across3 down5"> </td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="17" class="inp down4"> </td>
+        </tr>
+
+        <tr>
+            <td> <input type="text" maxlength="1" id="18" class="inp down1"> </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td><sup>8</sup> <input type="text" maxlength="1" id="19" class="across4 down5"> </td>
+            <td> <input type="text" maxlength="1" id="20" class="inp across4"> </td>
+            <td> <input type="text" maxlength="1" id="21" class="inp across4 down4"> </td>
+        </tr>
+
+        <tr>
+            <td> <input type="text" maxlength="1" id="22" class="inp down1"> </td>
+            <td class="black"></td>
+            <td><sup>9</sup> <input type="text" maxlength="1" id="23" class="down6"> </td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="24" class="inp down5"> </td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="25" class="inp down4"> </td>
+        </tr>
+
+        <tr>
+            <td><sup>10</sup> <input type="text" maxlength="1" id="26" class="across5 down1"> </td>
+            <td> <input type="text" maxlength="1" id="27" class="inp across5"> </td>
+            <td> <input type="text" maxlength="1" id="28" class="inp across5 down6"> </td>
+            <td> <input type="text" maxlength="1" id="29" class="inp across5"> </td>
+            <td> <input type="text" maxlength="1" id="30" class="inp across5 down5"> </td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="31" class="inp down4"> </td>
+        </tr>
+
+        <tr>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="32" class="inp down6"> </td>
+            <td class="black"></td>
+            <td><sup>11</sup> <input type="text" maxlength="1" id="33" class="across6 down5"> </td>
+            <td><sup>12</sup> <input type="text" maxlength="1" id="34" class="across6 down7"> </td>
+            <td class="black"></td>
+        </tr>
+
+        <tr>
+            <td class="black"></td>
+            <td><sup>13</sup> <input type="text" maxlength="1" id="35" class="across7 down8"> </td>
+            <td> <input type="text" maxlength="1" id="36" class="inp across7 down6"> </td>
+            <td class="black"></td>
+            <td><sup>14</sup> <input type="text" maxlength="1" id="37" class="across8 down5"> </td>
+            <td> <input type="text" maxlength="1" id="38" class="inp across8 down7"> </td>
+            <td> <input type="text" maxlength="1" id="39" class="inp across8"> </td>
+        </tr>
+
+        <tr>
+            <td><sup>15</sup> <input type="text" maxlength="1" id="40" class="across9 down9"> </td>
+            <td> <input type="text" maxlength="1" id="41" class="inp across9 down8"> </td>
+            <td><input type="text" maxlength="1" id="42" class="inp across9 down6"> </td>
+            <td> <input type="text" maxlength="1" id="43" class="inp across9"> </td>
+            <td class="black"></td>
+            <td> <input type="text" maxlength="1" id="44" class="inp down7"> </td>
+            <td class="black"></td>
+        </tr>
+
+        <tr>
+            <td><sup>16</sup> <input type="text" maxlength="1" id="45" class="across10 down9"> </td>
+            <td> <input type="text" maxlength="1" id="46" class="inp across10 down8"> </td>
+            <td class="black"></td>
+            <td class="black"></td>
+            <td><sup>17</sup> <input type="text" maxlength="1" id="47" class="across11"> </td>
+            <td> <input type="text" maxlength="1" id="48" class="inp across11 down7"> </td>
+            <td> <input type="text" maxlength="1" id="49" class="inp across11"> </td>
+        </tr>
+        
+    </table>
+    
+  <!-- </div> -->
+   <!-- <button onclick="checkAnswer()" class="btn">Submit</button> -->
+   
+</div>
+    <div style="display:inline-block; position: relative; left: 25%;">
+        <h3 class="headingCenter">Across</h3>
+        <ol>
+            1. Find them in cars <br>
+            5. Use it to listen <br>
+            6. Dishes of meat and vegetable cooked together in water <br>
+            8. Look for one on the end of your foot <br>
+            10. The name of a book <br>
+            11. Article <br>
+            13. Not you <br>
+            14. Listen to the kitten <br>
+            15. People like to race them <br>
+            16. Little connector <br>
+            17. Past tense, rhymes with a number under ten <br>
+        </ol>
+    </div>
+
+    <div style="display:inline-block; position: relative; left: 25%;">
+        <h3 class="headingCenter">Down</h3>
+        <ol>
+            1. Place without water <br>
+            2. Rodest pest <br>
+            3. Anger <br>
+            4 Scattered all over <br>
+            7. A small river <br>
+            9. Not this one but the …………. One <br>
+            12. The sort of house a mother would be proud of <br>
+            13. Spoil the work <br>
+            15. Abbreviation  <br>
+            <br>
+            <br>
+        </ol>
+
+    </div>
+</div>
+
+
+<iframe src="show_answer.html" width="40%"
+    height="611px"
+    scrolling="no"
+    frameborder="0" id="tab2"></iframe>
+
+<!-- <script>
+    const answer = "drivers"; // the correct answer
+
+const cells = document.querySelectorAll('.crossword-puzzle input');
+
+// add a "change" event listener to each cell
+cells.forEach(cell => {
+  cell.addEventListener('change', () => {
+    const userAnswer = Array.from(cells).map(cell => cell.value).join('');
+    if (userAnswer === answer) {
+      console.log('Correct answer!');
+    } else {
+      console.log('Wrong answer.');
+    }
+  });
+});
+</script> -->
+<!-- <div><button class="button-30" id="btn3" onclick="startGame()">Start Game </button></div> -->
+</body>
+</html>
